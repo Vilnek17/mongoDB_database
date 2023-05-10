@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/style.css')
+    title Users 
+  body
+    h1 Edit  #{user.name}
+    form(action=`/edit/${user._id}` class="add" method="POST")
+      label(for="name") Name :
+      input(id="name" name="name" placeholder="Enter name"  value=`${user.name}`)
+      label(for="age") Age :
+      input(id="age" name="age" placeholder="Enter your age" value=`${user.age}`)
+      label(for="status") Status:
+      input(id="status" name="status" placeholder="Enter your status" value=`${user.status}`)
+      label(for="img") Link for image:
+      input(id="img" name="link" placeholder="Enter image link" value=`${user.link}`)
+      button(type="submit") Edit users 
